@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meherin | Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f7f4;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #263b50;
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        nav {
+            background: #1c2d3d;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d5b98c;
+        }
+
+        section {
+            max-width: 950px;
+            margin: 45px auto;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #263b50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d5b98c;
+            padding-bottom: 10px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #e5eaf0;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .project h3 {
+            color: #263b50;
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #245c85;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background: #263b50;
+            color: white;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            section {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Hi, I'm Meherin!</h1>
+
+        <p>
+            I'm a Rutgers University student double majoring in
+            Business Analytics & Information Technology and
+            Supply Chain Management, passionate about using
+            data and technology to improve business operations.
+        </p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I'm currently studying at Rutgers University,
+            where I'm developing my knowledge of business
+            analytics, technology, and supply chain management.
+        </p>
+
+        <br>
+
+        <p>
+            Through my professional experience, I've developed
+            skills in Excel, data analysis, customer service,
+            and office operations. I'm interested in
+            opportunities that allow me to combine analytical
+            thinking with business operations to improve
+            efficiency.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Supply Chain Management</span>
+            <span class="skill">Project Management</span>
+            <span class="skill">Microsoft Outlook</span>
+            <span class="skill">Microsoft Teams</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Problem Solving</span>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <!-- PROJECT 1 -->
+        <div class="project">
+            <h3>1. U.S. Architecture Website</h3>
+
+            <p>
+                Developed a website exploring different types
+                of American residential architecture, including
+                Ranch, Colonial, and Modern homes. Used HTML
+                and CSS to create structured content and
+                navigation between pages.
+            </p>
+
+            <a href="Architecture4Main.html"
+               target="_blank"
+               rel="noopener noreferrer">
+                View Architecture Project
+            </a>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project">
+            <h3>2. Transportation Cost Calculator</h3>
+
+            <p>
+                Created an interactive transportation cost
+                comparison tool using HTML, CSS, and JavaScript.
+                The application accepts travel information,
+                calculates estimated driving fuel costs, and
+                compares air, train, and car transportation
+                to identify the least expensive option.
+            </p>
+
+            <a href="Assignment6.html"
+               target="_blank"
+               rel="noopener noreferrer">
+                View Transportation Calculator
+            </a>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project">
+            <h3>3. CBRE Project Management Simulation</h3>
+
+            <p>
+                Completed a virtual project management
+                simulation through Forage, gaining experience
+                in project planning, task prioritization,
+                and professional communication.
+            </p>
+
+            <a href="https://www.theforage.com/simulations/cbre/project-management-x2vz"
+               target="_blank"
+               rel="noopener noreferrer">
+                View CBRE Simulation
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Meherin | Rutgers University</p>
+        <p>Business Analytics & Supply Chain Management</p>
+    </footer>
+
+</body>
+</html>

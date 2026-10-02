@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Java Event Driven Transportation</title>
+  <!-- On my honor, I have neither received nor given any unauthorized assistance on this assignment. -->
+  <!-- Name: Maliha Amzad | Section 16 -->
+  <style>
+    body { background-color: black; color: white; font-family: "Times New Roman", Times, serif; }
+    h1 { color: yellow; }
+    h2, p { color: #00FF00; }
+    input[type="text"] { background-color: white; color: black; }
+  </style>
+</head>
+
+<body>
+
+<h1>Transportation Alternatives</h1>
+
+<p>
+  Destination:
+  <input type="text" id="destBox" value="">
+</p>
+
+<p>
+  One-Way <input type="radio" name="tripType" id="oneWay">
+  Round Trip <input type="radio" name="tripType" id="roundTrip">
+</p>
+
+<h2>Transportation Mode Prices and Data</h2>
+
+<p>
+  Air: $ <input type="text" id="airBox" value="">
+</p>
+
+<p>
+  Train: $ <input type="text" id="trainBox" value="">
+</p>
+
+<p>
+  Car Data: Miles <input type="text" id="milesBox" value="">
+  Miles Per Gallon <input type="text" id="mpgBox" value="">
+  Price per Gallon: $ <input type="text" id="ppgBox" value="">
+</p>
+
+<p>
+  <button id="processBtn" onclick="processResult();">Process Result</button>
+</p>
+
+<p>
+  Result:
+  <input type="text" id="resultBox" style="width:450px;" value="" readonly>
+</p>
+
+<script>
+// Rounds a value to two decimal places
+function roundMoney(x) {
+  var cents = Math.round(x * 100);
+  var dollars = cents / 100;
+  return dollars;
+}
+
+// Calculates the total car travel cost
+function carCost(miles, mpg, ppg) {
+  var gallons = miles / mpg;
+  var cost = gallons * ppg;
+  return cost;
+}
+
+function processResult() {
+  // Read and convert inputs
+  var destination = destBox.value;
+  var air   = Number(airBox.value);
+  var train = Number(trainBox.value);
+  var miles = Number(milesBox.value);
+  var mpg   = Number(mpgBox.value);
+  var ppg   = Number(ppgBox.value);
+
+  // Determine trip type
+  var tripText;
+  if (oneWay && oneWay.checked) {
+    tripText = "One-Way";
+  } else if (roundTrip && roundTrip.checked) {
+    tripText = "Round Trip";
+  } else {
+    tripText = "Trip Type Not Selected";
+  }
+
+  // Compute car cost
+  var car = carCost(miles, mpg, ppg);
+
+  // Determine the cheapest mode
+  var cheapestMode = "AIR";
+  var cheapestPrice = air;
+
+  if (train < cheapestPrice) {
+    cheapestMode = "TRAIN";
+    cheapestPrice = train;
+  }
+  if (car < cheapestPrice) {
+    cheapestMode = "CAR";
+    cheapestPrice = car;
+  }
+
+  // Round to two decimal places
+  var priceRounded = roundMoney(cheapestPrice).toFixed(2);
+
+  // Display result
+  var msg = "For " + destination + " (" + tripText + "), the least expensive mode is " +
+            cheapestMode + " at $" + priceRounded + ".";
+
+  resultBox.value = msg;
+}
+</script>
+
+</body>
+</html>

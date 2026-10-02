@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,36 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: #f8f7f4;
+            background-color: #f8f7f4;
             color: #333;
             line-height: 1.7;
         }
 
+        /* HEADER */
+
         header {
-            background: #263b50;
+            background-color: #263b50;
             color: white;
             text-align: center;
             padding: 65px 20px;
+        }
+
+        .profile-photo {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 4px solid white;
+            display: block;
+            margin: 0 auto 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         header h1 {
@@ -33,13 +52,15 @@
         }
 
         header p {
+            font-size: 17px;
             max-width: 750px;
             margin: auto;
-            font-size: 17px;
         }
 
+        /* NAVIGATION */
+
         nav {
-            background: #1c2d3d;
+            background-color: #1c2d3d;
             text-align: center;
             padding: 15px;
         }
@@ -55,6 +76,8 @@
             color: #d5b98c;
         }
 
+        /* GENERAL SECTIONS */
+
         section {
             max-width: 950px;
             margin: 45px auto;
@@ -68,6 +91,8 @@
             padding-bottom: 10px;
         }
 
+        /* SKILLS */
+
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -75,17 +100,25 @@
         }
 
         .skill {
-            background: #e5eaf0;
+            background-color: #e5eaf0;
             padding: 10px 18px;
             border-radius: 20px;
+            font-size: 14px;
         }
 
+        /* PROJECTS */
+
         .project {
-            background: white;
+            background-color: white;
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 10px;
             box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            transition: transform 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
         }
 
         .project h3 {
@@ -98,18 +131,37 @@
             margin-top: 12px;
             color: #245c85;
             font-weight: bold;
+            text-decoration: none;
         }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
 
         footer {
             text-align: center;
-            background: #263b50;
+            background-color: #263b50;
             color: white;
             padding: 25px;
         }
 
+        /* MOBILE DESIGN */
+
         @media (max-width: 600px) {
+
+            header {
+                padding: 45px 20px;
+            }
+
             header h1 {
                 font-size: 30px;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
             }
 
             section {
@@ -119,34 +171,51 @@
 
             nav a {
                 margin: 0 8px;
+                font-size: 14px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER WITH HEADSHOT -->
+
     <header>
+
+        <img
+            src="headshot.png"
+            alt="Meherin's professional headshot"
+            class="profile-photo"
+        >
+
         <h1>Hi, I'm Meherin!</h1>
 
         <p>
-            I'm a Rutgers University student double majoring in
-            Business Analytics & Information Technology and
-            Supply Chain Management, passionate about using
-            data and technology to improve business operations.
+            I'm a Rutgers University student double majoring
+            in Business Analytics & Information Technology
+            and Supply Chain Management, passionate about
+            using data and technology to improve business
+            operations and efficiency.
         </p>
+
     </header>
 
+
     <!-- NAVIGATION -->
+
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
     </nav>
 
+
     <!-- ABOUT ME -->
+
     <section id="about">
+
         <h2>About Me</h2>
 
         <p>
@@ -159,59 +228,99 @@
 
         <p>
             Through my professional experience, I've developed
-            skills in Excel, data analysis, customer service,
-            and office operations. I'm interested in
-            opportunities that allow me to combine analytical
-            thinking with business operations to improve
-            efficiency.
+            skills in Microsoft Excel, data analysis, customer
+            service, and office operations.
         </p>
+
+        <br>
+
+        <p>
+            I'm interested in opportunities that allow me
+            to combine analytical thinking with business
+            operations to improve efficiency and support
+            better decision-making.
+        </p>
+
     </section>
 
+
     <!-- SKILLS -->
+
     <section id="skills">
+
         <h2>My Skills</h2>
 
         <div class="skills">
+
             <span class="skill">Microsoft Excel</span>
+
             <span class="skill">Data Analysis</span>
+
             <span class="skill">Data Visualization</span>
+
             <span class="skill">HTML</span>
+
             <span class="skill">CSS</span>
+
             <span class="skill">JavaScript</span>
+
             <span class="skill">Supply Chain Management</span>
+
             <span class="skill">Project Management</span>
+
             <span class="skill">Microsoft Outlook</span>
+
             <span class="skill">Microsoft Teams</span>
+
             <span class="skill">Communication</span>
+
             <span class="skill">Problem Solving</span>
+
+            <span class="skill">Time Management</span>
+
+            <span class="skill">Customer Service</span>
+
         </div>
+
     </section>
 
+
     <!-- PROJECTS -->
+
     <section id="projects">
+
         <h2>My Projects</h2>
 
+
         <!-- PROJECT 1 -->
+
         <div class="project">
+
             <h3>1. U.S. Architecture Website</h3>
 
             <p>
                 Developed a website exploring different types
                 of American residential architecture, including
-                Ranch, Colonial, and Modern homes. Used HTML
-                and CSS to create structured content and
-                navigation between pages.
+                Ranch, Colonial, and Modern homes.
+                Used HTML and CSS to create structured content
+                and navigation between multiple web pages.
             </p>
 
-            <a href="Architecture4Main.html"
-               target="_blank"
-               rel="noopener noreferrer">
-                View Architecture Project
+            <a
+                href="Architecture4Main.html"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Architecture Project &rarr;
             </a>
+
         </div>
 
+
         <!-- PROJECT 2 -->
+
         <div class="project">
+
             <h3>2. Transportation Cost Calculator</h3>
 
             <p>
@@ -223,15 +332,21 @@
                 to identify the least expensive option.
             </p>
 
-            <a href="Assignment6.html"
-               target="_blank"
-               rel="noopener noreferrer">
-                View Transportation Calculator
+            <a
+                href="Assignment6.html"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Transportation Calculator &rarr;
             </a>
+
         </div>
 
+
         <!-- PROJECT 3 -->
+
         <div class="project">
+
             <h3>3. CBRE Project Management Simulation</h3>
 
             <p>
@@ -241,18 +356,30 @@
                 and professional communication.
             </p>
 
-            <a href="https://www.theforage.com/simulations/cbre/project-management-x2vz"
-               target="_blank"
-               rel="noopener noreferrer">
-                View CBRE Simulation
+            <a
+                href="https://www.theforage.com/simulations/cbre/project-management-x2vz"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View CBRE Simulation &rarr;
             </a>
+
         </div>
+
     </section>
 
+
     <!-- FOOTER -->
+
     <footer>
+
         <p>Meherin | Rutgers University</p>
-        <p>Business Analytics & Supply Chain Management</p>
+
+        <p>
+            Business Analytics & Information Technology
+            | Supply Chain Management
+        </p>
+
     </footer>
 
 </body>
